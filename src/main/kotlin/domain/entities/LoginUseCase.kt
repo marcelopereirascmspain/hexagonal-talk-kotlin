@@ -18,7 +18,7 @@ class LoginUseCase(val session: Session, val repository: UserRepository, val enc
             throw IncorrectPasswordException("The password is incorrect")
         }
 
-        return toResponse(user)
+        return fromUser(user)
     }
 }
 
